@@ -4,7 +4,7 @@ import { Button } from "@heroui/react";
 const WeatherHero = () => {
   return (
     <>
-      <section className="weather-hero flex flex-col min-h-screen justify-center items-center bg-gradient-to-br from-sky-500 via-blue-600 to-cyan-400 text-white p-10">
+      <section className="weather-hero flex flex-col min-h-screen justify-center items-center bg-gradient-to-br from-sky-500 via-blue-600 to-cyan-400 text-white p-10 overflow-x-hidden">
         <div className="bg-white/10 backdrop-blur-md shadow-lg text-center px-6 py-10 rounded-2xl">
           <h2 className="text-2xl md:text-4xl font-bold mb-6 drop-shadow-lg ">
             Live Weather Updates, Anytime!
@@ -22,8 +22,8 @@ const WeatherHero = () => {
               <i className="fa-brands fa-searchengin"></i>
             </button>
           </form>
-          <div className="w-full flex flex-col justify-center items-center">
-            <img src="image/cloud.png"  className="w-[100px] h-[100px] md:w-full md:h-full" alt="" />
+          <div className="w-full flex flex-col justify-center items-center md:mt-5">
+            <img src="image/cloud.png"  className="w-[100px] h-[100px] md:w-[200px] md:h-[200px]" alt="" />
           </div>
           <div className="mt-3 md:mt-5 ">
             <h2 className="text-5xl ">24c</h2>

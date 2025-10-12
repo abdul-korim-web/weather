@@ -57,7 +57,7 @@ export default function App() {
           className="sm:hidden"
         />
         <NavbarBrand className="flex items-center gap-3">
-          <img src="image/logo.jpg" className="w-10 h-10" alt="" />
+          <img src="image/logo.jpg" className="w-10 h-10 rounded-2xl" alt="" />
           <div className=" flex flex-col">
             <p className="font-bold text-xl  dark:text-amber-300">Weather</p>
             <p>Your Time</p>
