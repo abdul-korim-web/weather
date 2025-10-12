@@ -49,7 +49,7 @@ export default function App() {
   };
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className=" border-b-2 shadow-2xl">
+    <Navbar onMenuOpenChange={setIsMenuOpen} className=" border-b-2 shadow-2xl  static  ">
       {/* Left Content */}
       <NavbarContent>
         <NavbarMenuToggle
