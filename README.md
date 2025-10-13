@@ -1,16 +1,57 @@
-# React + Vite
+## 🌦️ Weather App — React + HeroUI Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🧩 Overview
 
-Currently, two official plugins are available:
+Weather App is a simple React web application that provides real-time weather updates for any city.
+Users can search for a city, view temperature, humidity, wind speed, and see a live weather icon.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project demonstrates modern React practices, state management with Hooks, responsive design, and integration with HeroUI components.
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
+- 🌤️ Live Weather Updates – Search for any city and get current weather info
+- 💧 Humidity & Wind Data – Displays key weather metrics
 
-## Expanding the ESLint configuration
+- 🌈 Dark Mode / Light Mode – Toggle theme dynamically
+- 📱 Responsive Design – Works seamlessly on desktop and mobile
+- 🎨 Modern UI – Built with Tailwind CSS, HeroUI, and Font Awesome icons
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+## 🚀 Live Demo
+
+Experience the app live: [Weather](https://abdul-weather.netlify.app/)
+
+
+## 🛠️ Technologies Used
+| Technology | Purpose |
+|-------------|----------|
+| ⚛️ React | Frontend Framework |
+| 🌐 WeatherAPI | Fetch live weather data |
+| 🧭 React Router DOM | Navigation & Routing |
+| 🎨 Tailwind CSS | Styling Framework |
+| 💎 HeroUI | Modern UI Components |
+| 💻 Font Awesome | Icons Library |
+
+---
+
+
+
+
+## 📜 License & Copyright
+
+This project is **open-source and free to use** under the **MIT License**.  
+
+You can freely:
+- ✅ View, modify, and use the source code  
+- ✅ Distribute or include it in your own projects  
+- ✅ Use it for personal or commercial purposes  
+
+Just make sure to keep the original author credit:
+
+**© 2025 Abdul Korim**
+
+## For collaboration or inquiries, contact:  
+📧 Email: abdulkorimwebdeveloper@gmail.com <br> 
+👉 GitHub: [abdul-korim-web](https://github.com/abdul-korim-web) <br>
+👉 Facebook: [abdul-korim-web](https://www.facebook.com/abdulkorimweb) <br>
+👉 LinkedIn: [abdul-korim-web](https://www.linkedin.com/in/abdul-korim-web/) <br>
