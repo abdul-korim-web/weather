@@ -33,14 +33,17 @@ export default function App() {
     {
       Icon: `fa-solid fa-address-card`,
       text: `Home`,
+      path :`/`
     },
     {
       Icon: `fa-solid fa-address-book`,
       text: `Contact`,
+      path :`/contact`
     },
     {
       Icon: `fa-solid fa-address-card`,
       text: `About`,
+      path :`/about`
     },
   ];
 
@@ -120,7 +123,8 @@ export default function App() {
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
+            <NavLink to={item.path}
+            
               className="w-full text-lg dark:text-gray-200"
               color={
                 index === 2
@@ -134,7 +138,7 @@ export default function App() {
             >
               <i className={item.Icon}></i>{" "}
               <span className="ml-2">{item.text}</span>
-            </Link>
+            </NavLink>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
