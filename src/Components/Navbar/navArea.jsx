@@ -10,6 +10,7 @@ import {
   Link,
   Button,
 } from "@heroui/react";
+import { NavLink } from "react-router-dom";
 
 export const AcmeLogo = () => {
   return (
@@ -30,16 +31,16 @@ export default function App() {
 
   const menuItems = [
     {
-      Icon:`fa-solid fa-address-card`,
-      text:`Home`
+      Icon: `fa-solid fa-address-card`,
+      text: `Home`,
     },
-     {
-      Icon:`fa-solid fa-address-book`,
-      text:`Contact`
+    {
+      Icon: `fa-solid fa-address-book`,
+      text: `Contact`,
     },
-     {
-      Icon:`fa-solid fa-address-card`,
-      text:`About`
+    {
+      Icon: `fa-solid fa-address-card`,
+      text: `About`,
     },
   ];
 
@@ -49,7 +50,10 @@ export default function App() {
   };
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className=" border-b-2 shadow-2xl  static  ">
+    <Navbar
+      onMenuOpenChange={setIsMenuOpen}
+      className=" border-b-2 shadow-2xl  static  "
+    >
       {/* Left Content */}
       <NavbarContent>
         <NavbarMenuToggle
@@ -69,28 +73,45 @@ export default function App() {
       {/* Center Links */}
       <NavbarContent className="hidden sm:flex gap-6" justify="center">
         <NavbarItem>
-          <Link className="text-lg dark:text-gray-200" color="foreground" href="#">
+          <NavLink to={`/`}
+            className="text-lg dark:text-gray-200"
+            color="foreground"
+            href="#"
+          >
             <i class="fa-solid fa-house"></i> <span className="ml-2">Home</span>
-          </Link>
+          </NavLink>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link className="text-lg dark:text-gray-200" aria-current="page" href="#">
-            <i class="fa-solid fa-address-book"></i> <span className="ml-2">Contact</span>
-          </Link>
+          <NavLink to={`/contact`}
+            className="text-lg dark:text-gray-200"
+            aria-current="page"
+            href="#"
+          >
+            <i class="fa-solid fa-address-book"></i>{" "}
+            <span className="ml-2">Contact</span>
+          </NavLink>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-lg dark:text-gray-200" color="foreground" href="#">
-            <i class="fa-solid fa-address-card"></i> <span className="ml-2">About</span>
-          </Link>
+          <NavLink to={`/about`}
+            className="text-lg dark:text-gray-200"
+            color="foreground"
+            href="#"
+          >
+            <i class="fa-solid fa-address-card"></i>{" "}
+            <span className="ml-2">About</span>
+          </NavLink>
         </NavbarItem>
       </NavbarContent>
 
       {/* Right Content */}
       <NavbarContent justify="end" className="gap-3">
-       
         <NavbarItem>
           <Button onClick={toggleDarkMode} color="primary" isIconOnly size="lg">
-            {isDarkmode ? <i className="fa-solid fa-sun"></i> : <i className="fa-solid fa-moon"></i>}
+            {isDarkmode ? (
+              <i className="fa-solid fa-sun"></i>
+            ) : (
+              <i className="fa-solid fa-moon"></i>
+            )}
           </Button>
         </NavbarItem>
       </NavbarContent>
@@ -111,7 +132,8 @@ export default function App() {
               href="#"
               size="lg"
             >
-              <i className={item.Icon}></i> <span className="ml-2">{item.text}</span>
+              <i className={item.Icon}></i>{" "}
+              <span className="ml-2">{item.text}</span>
             </Link>
           </NavbarMenuItem>
         ))}
