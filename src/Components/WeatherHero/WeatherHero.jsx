@@ -8,13 +8,13 @@ const WeatherHero = () => {
 
   const WeatherButton = async (e) => {
     e.preventDefault();
-    let api = `http://api.weatherapi.com/v1/current.json?key=4685830df8af41f3bae124738251110&q=${fromdata}&aqi=no`;
+    let api = `https://api.weatherapi.com/v1/current.json?key=4685830df8af41f3bae124738251110&q=${fromdata}&aqi=no`;
     try {
       const responce = await fetch(api);
       const data = await responce.json();
       setweatherdata(data);
     } catch (error) {
-      console.log(`data fetch fail`);
+      alert(`data fetch fail`);
     }
   };
   // titel change 
