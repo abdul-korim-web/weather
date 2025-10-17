@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "@heroui/react";
+  import { ToastContainer, toast } from 'react-toastify';
 
 const WeatherHero = () => {
   const [weatherdata, setweatherdata] = useState(null);
@@ -13,8 +14,17 @@ const WeatherHero = () => {
       const responce = await fetch(api);
       const data = await responce.json();
       setweatherdata(data);
+      toast.success(`Data Found`,{
+        autoClose:3000,
+        position:`top-center`
+      });
+      
     } catch (error) {
-      alert(`data fetch fail`);
+      
+      toast.error(`Data fetch fail`,{
+        autoClose:3000,
+        position:`top-center`
+      })
     }
   };
   // titel change 
@@ -25,10 +35,12 @@ const WeatherHero = () => {
   return (
     <>
       <section className="weather-hero flex flex-col min-h-screen justify-center items-center bg-gradient-to-br from-sky-500 via-blue-600 to-cyan-400 text-white p-10 overflow-x-hidden">
+        <ToastContainer/>
         <div className="bg-white/10 backdrop-blur-md shadow-lg text-center px-6 py-10 rounded-2xl">
           <h2 className="text-2xl md:text-4xl font-bold mb-6 drop-shadow-lg ">
             Live Weather Updates, Anytime!
           </h2>
+
           <form
             action=""
             className="flex justify-center gap-3"
