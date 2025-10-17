@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "@heroui/react";
-  import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
 
 const WeatherHero = () => {
   const [weatherdata, setweatherdata] = useState(null);
@@ -13,29 +13,30 @@ const WeatherHero = () => {
     try {
       const responce = await fetch(api);
       const data = await responce.json();
+      console.log(data);
       setweatherdata(data);
-      toast.success(`Data Found`,{
-        autoClose:3000,
-        position:`top-center`
-      });
-      
+      if (data?.error) {
+        toast.error(`Location Data Not Found`,)
+        toast.error(`Please Try Another Location`,)
+        
+      } else{
+        toast.success(`Location Found`)
+      }
     } catch (error) {
-      
-      toast.error(`Data fetch fail`,{
-        autoClose:3000,
-        position:`top-center`
-      })
+      toast.error(`Data fetch fail`, {
+        autoClose: 3000,
+        position: `top-center`,
+      });
     }
   };
-  // titel change 
+  // titel change
   useEffect(() => {
-    
-    document.title = `Weather | Home`
+    document.title = `Weather | Home`;
   }, []);
   return (
     <>
       <section className="weather-hero flex flex-col min-h-screen justify-center items-center bg-gradient-to-br from-sky-500 via-blue-600 to-cyan-400 text-white p-10 overflow-x-hidden">
-        <ToastContainer/>
+        <ToastContainer position="top-center" autoClose="3000" />
         <div className="bg-white/10 backdrop-blur-md shadow-lg text-center px-6 py-10 rounded-2xl">
           <h2 className="text-2xl md:text-4xl font-bold mb-6 drop-shadow-lg ">
             Live Weather Updates, Anytime!
